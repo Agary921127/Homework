@@ -6,6 +6,7 @@ d3.csv('').then(
 
 function drawHistogram(res){
     console.log(res);
+    
 }
 
 
