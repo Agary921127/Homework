@@ -1,4 +1,4 @@
-d3.csv('https://raw.githubusercontent.com/ryanchung403/dataset/main/train_data_titanic.csv').then(
+d3.csv('https://www.k12ea.gov.tw/files/common_unit/c8552d07-2d61-456c-addc-3949198984e1/doc/%E5%AD%B8%E7%94%9F%E8%BA%AB%E9%AB%98%E5%B9%B3%E5%9D%87%E5%80%BC(6%E6%AD%B2-15%E6%AD%B2).csv').then(
     res =>{
         drawHistogram(res)
     }
@@ -6,7 +6,7 @@ d3.csv('https://raw.githubusercontent.com/ryanchung403/dataset/main/train_data_t
 
 function drawHistogram(res){
     console.log(res);
-    let myGraph=document.getElementById('myGraph');
+    let myGraph2 = document.getElementById('myGraph');
 
     let trace1 = {};
     trace1.type ="histogram";
