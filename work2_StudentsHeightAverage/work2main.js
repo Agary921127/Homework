@@ -32,7 +32,7 @@ function drawStudentsHeightAverage(res){
     data.push(traceW3_female);
     let layout ={
         margin:{
-            t:50
+            t:40
         },
         title: {
             text: '台灣男女身高年齡關係圖',
