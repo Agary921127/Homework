@@ -1,11 +1,12 @@
-d3.csv('https://service.taipower.com.tw/data/opendata/apply/file/d003001/001.csv').then(
+d3.csv('EU.csv').then(
     res =>{
-        drawHistogram(res)
+        drawElectricUsed(res)
     }
 );
 
-function drawHistogram(res){
+function drawElectricUsed(res){
     console.log(res);
+    let myGraph_work1 = document.getElementById('myGraphW1')
     
 }
 
