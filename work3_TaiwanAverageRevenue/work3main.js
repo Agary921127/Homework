@@ -69,6 +69,9 @@ function drawTaiwanAverageRevenue(res){
         margin:{
             t:0
         },
+        yaxis: {
+            range: [1000000,2000000]  // 设置 x 轴的范围
+        },
     };
     Plotly.newPlot(myGraphW3, data, layout);
 }

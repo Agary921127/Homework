@@ -15,8 +15,9 @@
 					<nav id="nav">
 						<a href="#" class="icon solid fa-home"><span>Home</span></a>
 						<a href="#work1" class="icon solid fa-folder"><span>work1</span></a>
-						<a href="#work2" class="icon solid fa-folder"><span>work2</span></a>
-						<a href="#work3" class="icon solid fa-folder"><span>work3</span></a>
+						<a href="#work2" class="icon solid fa-folder"><span>身高</span></a>
+						<a href="#work3" class="icon solid fa-folder"><span>縣市均薪</span></a>
+						<a href="#work4" class="icon solid fa-folder"><span>天然氣進口</span></a>
 					</nav>
 
 				<!-- Main -->
@@ -27,20 +28,30 @@
 									<h1>111502517 張高睿</h1>
 									<p>Data Viz- 1121</p>
 								</header>
-								<a href="#work1" class="jumplink pic">
-									<span class="arrow icon solid fa-chevron-right"><span>See my work1</span></span>
-									<img src="images/me.jpg" alt="" />
-								</a>
+								<body>
+							
+									<a href="#work2" class="jumplink pic">
+										<span class="arrow icon solid fa-chevron-right"><span>See my work2</span></span>
+										<img src="images/pic02.jpg" alt="" />
+									</a>
+									<a href="#work3" class="jumplink pic">
+										<span class="arrow icon solid fa-chevron-right"><span>See my work3</span></span>
+										<img src="images/pic05.jpg" alt="" />
+									</a>
+									<a href="#work4" class="jumplink pic">
+										<span class="arrow icon solid fa-chevron-right"><span>See my work1</span></span>
+										<img src="images/pic06.jpg" alt="" />
+									</a>
+								</body>
 							</article>
 						<!-- work1 -->
 							<article id="work1" class="panel">
 								<header>
-									<h2>work1</h2>
+									<h2>用電統計資料</h2>
 								</header>
 								<p>
-									Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit.
-									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-									luctus elit eget interdum.
+									由於我住外宿，每度電5塊錢，我一開始覺得十分不合理，但後來了解累進費率後就理解為何可以這麼貴了。
+									<br>因此我也有興趣了解這幾年電費的變化率
 								</p>
 								<section>
 									<div id="myGraphW1"></div>
@@ -94,6 +105,31 @@
 								</p>
 								<a href="https://data.gov.tw/dataset/9418">資料來源</a>
 							</article>
+						<!-- work4 -->
+							<article id="work4" class="panel">
+								<header>
+									<h2>天然氣進口圓餅圖</h2>
+								</header>
+								<style>
+									p {
+										text-indent: 20px;
+									}
+								</style>
+								<p>
+									由於我對環保議題有興趣，前些時間有做化石燃料的報告，就想說用這次的機會了解一下台灣化石燃料進口的組成。
+								</p>	
+								<section>
+									<div id="myGraphW4"></div>
+									<div id="myGraphW4_2"></div>
+								</section>
+								<p>
+									觀察上兩圖後：
+									<br>1.	澳大利亞對台灣天然氣進口佔比非常大
+									<br>2.	完全沒有中國的天然氣進口我覺得很困惑
+									<br>3.	相比20年前，台灣的天然氣進口組成健康很多了
+								</p>
+								<a href="https://data.gov.tw/dataset/163715">資料來源</a>
+							</article>
 					</div>
 			</div>
 
@@ -108,5 +144,6 @@
 			<script src="work1_ElectricUsed/work1main.js"></script>
 			<script src="work2_StudentsHeightAverage/work2main.js"></script>
 			<script src="work3_TaiwanAverageRevenue/work3main.js"></script>
+			<script src="work4_PieChar/work4main.js"></script>
 	</body>
 </html>
