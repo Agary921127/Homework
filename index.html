@@ -14,56 +14,44 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#work1" class="icon solid fa-folder"><span>work1</span></a>
 						<a href="#work2" class="icon solid fa-folder"><span>身高</span></a>
 						<a href="#work3" class="icon solid fa-folder"><span>縣市均薪</span></a>
 						<a href="#work4" class="icon solid fa-folder"><span>天然氣進口</span></a>
+						<a href="#work5" class="icon solid fa-folder"><span>化燃進口</span></a>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<!-- Me -->
 							<article id="home" class="panel intro">
+								<style>
+									.panel.intro header h1 {
+										font-size: 30px; 
+									}
+									.panel.intro header p {
+										font-size: 20px;
+									}
+									.panel.intro body img {
+										width: 10%; 
+										height: auto; 
+									}
+								</style>
 								<header>
 									<h1>111502517 張高睿</h1>
-									<p>Data Viz- 1121</p>
+									<p>Data Viz- 1115</p>
 								</header>
 								<body>
-							
-									<a href="#work2" class="jumplink pic">
-										<span class="arrow icon solid fa-chevron-right"><span>See my work2</span></span>
-										<img src="images/pic02.jpg" alt="" />
-									</a>
-									<a href="#work3" class="jumplink pic">
-										<span class="arrow icon solid fa-chevron-right"><span>See my work3</span></span>
-										<img src="images/pic05.jpg" alt="" />
-									</a>
-									<a href="#work4" class="jumplink pic">
-										<span class="arrow icon solid fa-chevron-right"><span>See my work1</span></span>
-										<img src="images/pic06.jpg" alt="" />
-									</a>
+									<img src="images/bug.jpg" alt="" />
 								</body>
 							</article>
-						<!-- work1 -->
-							<article id="work1" class="panel">
-								<header>
-									<h2>用電統計資料</h2>
-								</header>
-								<p>
-									由於我住外宿，每度電5塊錢，我一開始覺得十分不合理，但後來了解累進費率後就理解為何可以這麼貴了。
-									<br>因此我也有興趣了解這幾年電費的變化率
-								</p>
-								<section>
-									<div id="myGraphW1"></div>
-								</section>
-							</article>
+
 						<!-- work2 -->
 							<article id="work2" class="panel">
 								<header>
-									<h2>身高</h2>
+									<h2>身高散佈圖</h2>
 								</header>
 								<p>
-									以下是有關台灣青少年在6~15歲的身高數據圖
+									以下是有關台灣青少年在6~15歲的身高散佈圖
 								</p>
 								<section>
 									<div id="myGraphW2"></div>
@@ -82,7 +70,7 @@
 						<!-- work3 -->
 							<article id="work3" class="panel">
 								<header>
-									<h2>台灣各縣市平均年薪資</h2>
+									<h2>台灣四縣市平均年薪資長條圖</h2>
 								</header>
 								<style>
 									p {
@@ -108,7 +96,7 @@
 						<!-- work4 -->
 							<article id="work4" class="panel">
 								<header>
-									<h2>天然氣進口圓餅圖</h2>
+									<h2>液化石油氣進口圓餅圖</h2>
 								</header>
 								<style>
 									p {
@@ -116,7 +104,7 @@
 									}
 								</style>
 								<p>
-									由於我對環保議題有興趣，前些時間有做化石燃料的報告，就想說用這次的機會了解一下台灣化石燃料進口的組成。
+									由於我對環保議題有興趣，前些時間有做台灣燃料的報告，就想說用這次的機會更進一步了解台灣化石燃料進口的組成。
 								</p>	
 								<section>
 									<div id="myGraphW4"></div>
@@ -125,10 +113,50 @@
 								<p>
 									觀察上兩圖後：
 									<br>1.	澳大利亞對台灣天然氣進口佔比非常大
-									<br>2.	完全沒有中國的天然氣進口我覺得很困惑
-									<br>3.	相比20年前，台灣的天然氣進口組成健康很多了
+									<br>2.	完全沒有中國的天然氣進口
+									<br>3.	相比20年前，台灣的天然氣進口組成健康很多
+									
 								</p>
 								<a href="https://data.gov.tw/dataset/163715">資料來源</a>
+							</article>
+						<!-- work5 -->
+							<article id="work5" class="panel">
+								<header>
+									<h2>近二十年化石燃料進口比較長條圖</h2>
+								</header>
+								<style>
+									p {
+										text-indent: 40px;
+									}
+								</style>
+								<p>
+									由於在查找資料時，我發現台灣的天然氣燃料進口量近20年幾乎在穩定增加中，因此我想看看不同燃料之間是否有相同的現象
+								</p>	
+								<section>
+									<div id="myGraphW5"></div>
+								</section>
+						
+								<p>
+									由上圖可知：
+									<br>1.	煤礦一直是台灣最主要的進口燃料
+									<br>2.	只有天然氣在逐年增加進口量
+									<br>3.	從2004年開始，燃料的進口量變動量不大
+								</p>
+								<head>
+									<h2>額外發現</h2>
+								</head>
+								
+								<p>
+									<br>
+									我原先在做這個圖時出現了bug，console裡沒有出現錯誤，問chatGPT也無法找出錯誤，但第二個與第三個trace就是無法呈現數據。
+									我認為是在合併時出現錯誤，因為console所有的res元素只有第一個.csv檔的數據有跑出來。
+									chatGPT認為是promise.all()這個函數錯了，我覺得這個錯誤挺有趣的所以就保留下來了。
+									後來我把三個.csv檔裡會用到的數據合併在一個.csv檔裡，再跑程式後圖片就出來了。
+									證實了是promise.all()的問題，但我還是不會正確的合併多檔，希望老師之後可以再觸及一下。
+								</p>
+								<a href="https://data.gov.tw/dataset/163715">液化天然氣進口資料來源</a>
+								<a href="https://data.gov.tw/dataset/163714">原油進口資料來源</a>
+								<a href="https://data.gov.tw/dataset/163716">煤進口資料來源</a>
 							</article>
 					</div>
 			</div>
@@ -141,9 +169,9 @@
 			<script src="assets/js/main.js"></script>
 			<script src="//unpkg.com/d3"></script>
 			<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
-			<script src="work1_ElectricUsed/work1main.js"></script>
 			<script src="work2_StudentsHeightAverage/work2main.js"></script>
 			<script src="work3_TaiwanAverageRevenue/work3main.js"></script>
-			<script src="work4_PieChar/work4main.js"></script>
+			<script src="work4_Gas/work4main.js"></script>
+			<script src="work5_H_F/work5main.js"></script>
 	</body>
 </html>

@@ -67,11 +67,12 @@ function drawTaiwanAverageRevenue(res){
 
     let layout ={
         margin:{
-            t:0
+            t:50
         },
         yaxis: {
             range: [1000000,2000000]  // 设置 x 轴的范围
         },
+        title: "北北桃新均薪十年比較長條圖"
     };
     Plotly.newPlot(myGraphW3, data, layout);
 }
